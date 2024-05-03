@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax-Effect</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.js">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Tajmahal</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section id="scene">
+        <h2 id="text">Tajmahal</h2>
+        <img src="./img/01.png" id="img1">
+        <img src="./img/02.png" id="img2">
+        <img src="./img/03.png" id="img3">
+        <img src="./img/04.png" id="img4">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>The Taj Mahal is an iconic symbol of love and architectural wonder located in Agra, India.
+             Commissioned in 1632 by the Mughal emperor Shah Jahan in memory of his beloved wife Mumtaz
+              Mahal, it took over 20,000 artisans and craftsmen to complete the construction, which lasted 
+              for around 22 years. The Taj Mahal is renowned for its stunning white marble facade adorned with
+               intricate inlay work, including semi-precious stones and intricate calligraphy from the Quran. 
+               It stands as a testament to the beauty of Mughal architecture and remains one of the most visited
+                landmarks in the world, attracting millions of tourists each year. <br><br/>  The Taj Mahal's architectural
+                 design is a remarkable blend of Persian, Islamic, and Indian styles, showcasing the pinnacle
+                  of Mughal architecture. The main structure consists of a symmetrical layout with a central
+                   white marble mausoleum flanked by four minarets standing at each corner. The mausoleum houses
+                    the tombs of Shah Jahan and Mumtaz Mahal, while the surrounding complex includes beautifully
+                     landscaped gardens, reflecting pools, and additional structures such as a mosque and a guesthouse.<br><br/>
+
+                The intricate details of the Taj Mahal's exterior are awe-inspiring. The marble surfaces are adorned with
+                 delicate floral motifs, geometric patterns, and calligraphy, showcasing the skill of the craftsmen who
+                  worked on it. The use of translucent marble allows light to filter through, creating a mesmerizing play
+                   of light and shadow throughout the day. <br><br/>
+                
+                The Taj Mahal's significance extends beyond its architectural beauty. It is a symbol of enduring love and devotion,
+                 as Shah Jahan built it as a tribute to his beloved wife Mumtaz Mahal, who died during childbirth. 
+                 The mausoleum's design and the materials used, including the white marble and precious gemstones, 
+                 reflect the emperor's profound grief and his desire to create a lasting monument to their love. <br><br/>
+                
+                Over the centuries, the Taj Mahal has become not only a UNESCO World Heritage Site but also a universally 
+                recognized symbol of India's rich cultural heritage. Its timeless elegance and emotional resonance continue
+                 to captivate visitors from around the world, making it one of the most cherished and photographed landmarks
+                  on the planet. </p>
+
+    </div>
+    <script>
+        let text = document.getElementById('text');
+        let img1 = document.getElementById('img1');
+        let img2 = document.getElementById('img2');
+        let img3 = document.getElementById('img3');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            text.style.marginTop = value * -1.5+'px';   
+            img1.style.top = value * 0.75+'px';
+            img2.style.top = value * 0.5+'px';
+            img3.style.top = value * 0.25+'px';
+    })
+    </script>
+</body>
+</html>
